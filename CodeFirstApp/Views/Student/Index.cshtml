@@ -1,0 +1,45 @@
+﻿@model CodeFirstApp.Models.MyViewModel
+
+@{
+    ViewBag.Title = "Index Stdudnets";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+
+@foreach (var item in Model.Students)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+    </tr>
+}
+<br />
+
+
+@foreach (var item in Model.Books)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+    </tr>
+}
+
+
+
+}
